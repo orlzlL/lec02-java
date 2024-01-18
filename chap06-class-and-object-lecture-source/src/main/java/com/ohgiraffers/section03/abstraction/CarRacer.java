@@ -10,7 +10,7 @@ public class CarRacer {
         this.myCar.startUp();
     }
 
-    public void stepAccelator(){
+    public void stepAccelator() {
         myCar.go();
     }
 

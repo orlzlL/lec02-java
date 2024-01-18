@@ -14,8 +14,5 @@ public class Application {
         Monster monster2 = new Monster();
         monster2.setInfo1("프랑켄슈타인");
         monster2.setInfo2(200);
-
-
-
     }
 }

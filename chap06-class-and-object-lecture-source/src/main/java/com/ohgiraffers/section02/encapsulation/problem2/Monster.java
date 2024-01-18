@@ -8,12 +8,12 @@ public class Monster {
     String kinds;
     int mp;
 
-    void setInfo1(String info1){
+    void setInfo1(String info1) {
 //        this.name = info1;
         this.kinds = info1;
     }
 
-    void setInfo2(int info2){
+    void setInfo2(int info2) {
 //        this.hp = info2;
         this.mp = info2;
     }

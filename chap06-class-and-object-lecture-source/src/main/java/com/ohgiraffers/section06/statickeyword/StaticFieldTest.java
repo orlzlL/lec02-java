@@ -7,7 +7,7 @@ public class StaticFieldTest {
 
     /* 설명. 기본생성자 및 getter만 만들어보자. */
 
-    public StaticFieldTest(){
+    public StaticFieldTest() {
     }
 
     public int getNonStaticCount() {
@@ -19,13 +19,12 @@ public class StaticFieldTest {
     }
 
     /* 설명. setter를 대신해서 필드 값을 각각 증가시킬 두 메소드 추가 */
-    public void increaseNonStaticCount(){
+    public void increaseNonStaticCount() {
         this.nonStaticCount++;
     }
 
-    public static void increaseStaticCount(){
+    public static void increaseStaticCount() {
 //        StaticFieldTest.staticCount++;
         staticCount++;
     }
-
 }

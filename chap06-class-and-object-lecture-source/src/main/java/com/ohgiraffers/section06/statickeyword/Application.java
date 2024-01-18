@@ -8,8 +8,8 @@ public class Application {
          *  static
          *  : 프로그램이 실행될 때 정적 메모리 영역(static 영역 또는 클래스 영역)에 할당하는 키워드이다.
          *    여러 인스턴스가 공유해서 사용할 목적의 공간이다.
-         *    대표적인 예로 singleton 객체가 있다.
-        **/
+         *    대표적인 예로 싱글톤(singleton) 객체가 있다.
+        * */
 
         /* 목차. 1. static 키워드를 필드에서 사용 */
         StaticFieldTest stf1 = new StaticFieldTest();
@@ -30,5 +30,6 @@ public class Application {
         StaticFieldTest stf2 = new StaticFieldTest();
         System.out.println("non-static field: " + stf2.getNonStaticCount());
         System.out.println("static field: " + StaticFieldTest.getStaticCount());
+
     }
 }
