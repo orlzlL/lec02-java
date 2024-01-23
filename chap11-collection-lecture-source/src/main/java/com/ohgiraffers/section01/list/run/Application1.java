@@ -3,9 +3,9 @@ import java.util.*;
 
 public class Application1 {
     public static void main(String[] args) {
-        
+
         /* 수업목표. 컬렉션 프레임워크에 대해 이해할 수 있다. */
-        ArrayList aList = new ArrayList();
+       ArrayList aList = new ArrayList();
 //    ArrayList<Object> aList = new ArrayList<>();              // 다이아몬드 연산자 없는 제네릭 클래스는 <Object>와 같다.
 
         List list = new ArrayList();                                // 컬렉션은 다형성을 적용한 형태로 많이들 쓴다.
@@ -75,10 +75,41 @@ public class Application1 {
         aList.remove(1);
         System.out.println(aList);
 
+        /* 설명. ArrayList를 활용해 정렬을 진행해 보자. */
+        List<String> stringList = new ArrayList<>();
+        stringList.add("apple");
+        stringList.add("orange");
+        stringList.add("banana");
+        stringList.add("mango");
+        stringList.add("grape");
 
+        System.out.println("stringList = " + stringList);
+
+        /* 설명. Collections의 sort() 메소드를 활용한 정렬 */
+        Collections.sort(stringList);
+        System.out.println("stringList = " + stringList);
+
+        List<Integer> integerList = new ArrayList<>();
+        integerList.add(4);
+        integerList.add(20);
+        integerList.add(5);
+        integerList.add(8);
+        integerList.add(14);
+
+        System.out.println("integerList = " + integerList);
+
+        Collections.sort(integerList);
+        System.out.println("integerList = " + integerList);
+
+        /* 설명. 내림차순으로 바꾸기 위해 ArrayList에서 LinkedList로 교체 */
+        stringList = new LinkedList<>(stringList);
+        Iterator<String> iter = ((LinkedList<String>)stringList).descendingIterator();
+        while(iter.hasNext()){
+            System.out.println(iter.next());
+        }
+
+        
+        
     }
-
-
-
 }
 
