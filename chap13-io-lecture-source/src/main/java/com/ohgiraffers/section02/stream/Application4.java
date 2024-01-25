@@ -10,20 +10,18 @@ public class Application4 {
 
         FileWriter fw = null;
         try {
-            fw = new FileWriter("src/main/java/section02/stream/testWriter.txt");
+            fw = new FileWriter("src/main/java/com/ohgiraffers/section02/stream/testWriter.txt");
             fw.write('한');
             fw.write('글');
 
         } catch (IOException e) {
             throw new RuntimeException(e);
         } finally {
-            try{
+            try {
                 if(fw != null) fw.close();
-            } catch (IOException e){
+            } catch (IOException e) {
                 throw new RuntimeException(e);
             }
-
         }
-
     }
 }

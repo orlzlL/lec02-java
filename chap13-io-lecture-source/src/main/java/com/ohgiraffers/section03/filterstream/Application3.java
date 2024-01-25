@@ -10,7 +10,7 @@ public class Application3 {
         try {
             dos = new DataOutputStream(
                     new FileOutputStream("src/main/java/com/ohgiraffers/section03/filterstream/testData.txt"));
-
+            
             /* 설명. data타입 별로 해당 데이터 타입에 맞는 출력 메소드를 활용하여 파일에 출력하기(순서 중요!) */
 
             dos.writeUTF("홍길동");
@@ -43,12 +43,12 @@ public class Application3 {
             dis = new DataInputStream(
                     new FileInputStream("src/main/java/com/ohgiraffers/section03/filterstream/testData.txt"));
 
-            /* 설명. 입력받을 때도 출력 때의 순서를 지켜서 입력 받는다. */
-            while(true) {
+           /* 설명. 입력받을 때도 출력 때의 순서를 지켜서 입력 받는다. */
+           while(true) {
                 System.out.println(dis.readUTF());
                 System.out.println(dis.readInt());
                 System.out.println(dis.readChar());
-            }
+           }
 
         } catch (EOFException e) {
 
@@ -67,3 +67,14 @@ public class Application3 {
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+

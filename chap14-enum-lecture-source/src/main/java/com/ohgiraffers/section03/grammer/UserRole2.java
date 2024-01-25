@@ -13,7 +13,7 @@ public enum UserRole2 {
      *  (실제로 매개변수 있는 생성자를 호출하기 때문)
      *  enum 상수 필드의 괄호(()) 안에 넣은 값이 해당 생성자쪽으로 전달되며 Enum 인스턴스가 생성되며
      *  생성된 인스턴스는 싱글톤 객체이다.
-     * */
+    * */
     UserRole2(String description) {
         System.out.println("description = " + description);
         this.description = description;

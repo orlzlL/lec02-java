@@ -11,12 +11,12 @@ public class Application3 {
         FileOutputStream fout = null;
 
         try {
-            fout = new FileOutputStream("src/main/java/section02/stream/testOutputStream.txt");
+            fout = new FileOutputStream("src/main/java/com/ohgiraffers/section02/stream/testOutputStream.txt");
 //            fout.write('a');
 //            fout.write(97);
 
             byte[] bArr = new byte[]{'a', 'p', 'p', 'l', 'e'};
-//            for(byte b: bArr){
+//            for(byte b: bArr) {
 //                fout.write(b);
 //            }
 
@@ -29,9 +29,9 @@ public class Application3 {
         } catch (IOException e) {
             throw new RuntimeException(e);
         } finally {
-            try{
+            try {
                 if(fout != null) fout.close();
-            }catch(IOException e){
+            } catch (IOException e) {
                 throw new RuntimeException(e);
             }
         }

@@ -9,7 +9,7 @@ public class Application2 {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        System.out.println("문자열 입력: ");
+        System.out.print("문자열 입력: ");
         try {
             String value = br.readLine();
 
