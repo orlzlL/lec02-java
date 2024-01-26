@@ -13,7 +13,24 @@ public class Member implements Serializable {       // 객체 입출력을 위�
     private String[] hobbies;       // 회원취미들
     private BloodType bloodType;    // 혈액형
 
+
     /* 설명. 엔티티 클래스는 setter를 꼭 필요한 것만 만든다. */
+
+    public void setMemNo(int memNo) {
+        this.memNo = memNo;
+    }
+
+    public Member(String id, String pwd, int age, String[] hobbies) {
+        this.id = id;
+        this.pwd = pwd;
+        this.age = age;
+        this.hobbies = hobbies;
+    }
+
+
+    public void setBloodType(BloodType bloodType) {
+        this.bloodType = bloodType;
+    }
 
     public Member() {
     }
