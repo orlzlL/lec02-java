@@ -53,4 +53,14 @@ public class MemberService {
             System.out.println(member.getId()+ "님의 회원 가입이 성공하였습니다.");
         }
     }
+
+    public void deleteMember(int memNo) {
+        int result = mr.deleteMember(memNo);
+        if(result > 0){
+            System.out.println(memNo + "번 회원 탈퇴를 성공하였습니다.");
+            return;
+        }
+        
+        System.out.println("회원 탈퇴에 실패하였습니다.");
+    }
 }
