@@ -53,7 +53,7 @@ public class MemberService {
             System.out.println(member.getId()+ "님의 회원 가입이 성공하였습니다.");
         }
     }
-ㅊ
+
     public void deleteMember(int memNo) {
         int result = mr.deleteMember(memNo);
         if(result > 0){
