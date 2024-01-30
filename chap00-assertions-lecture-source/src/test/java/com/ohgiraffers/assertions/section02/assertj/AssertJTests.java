@@ -5,6 +5,7 @@ import org.assertj.core.api.AssertionsForClassTypes;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.lang.reflect.Array;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.Month;
@@ -104,5 +105,23 @@ public class AssertJTests {
                 .filteredOn(member -> member.getAge() > 20)
                 .containsOnly(member3, member4);
 
+    }
+
+    /* 목차. 6. 객체 프로퍼티 검증하기 */
+    /* 필기. 객체의 프로퍼티를 추출하여 filter를 할 수 있다. 이 때 getter함수가 존재하지 않아도 프로퍼티 필터링이 가능하다. */
+    @Test
+    @DisplayName("객체의 프로퍼티 검증 테스트하기")
+    void testPropertyValidation(){
+        Member member1 = new Member(1, "user01", "홍길동", 20);
+        Member member2 = new Member(2, "user02", "유관순", 16);
+        Member member3 = new Member(3, "user03", "이순신", 40);
+        Member member4 = new Member(4, "user04", "신사임당", 43);
+        Member member5 = new Member(5, "user05", "임꺽정", 19);
+
+        List<Member> members = Arrays.asList(member1, member2, member3, member4, member5);
+
+        Assertions.assertThat(members)
+                .filteredOn("age", 20)
+                .containsOnly(member1);
     }
 }
