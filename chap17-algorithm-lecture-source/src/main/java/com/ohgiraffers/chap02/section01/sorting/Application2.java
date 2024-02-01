@@ -1,13 +1,14 @@
 package com.ohgiraffers.chap02.section01.sorting;
 
+import java.util.Scanner;
+
 /* 수업목표. 선택 정렬을 이해할 수 있다. */
 /* 필기.
  *  선택 정렬(Selection Sort)
- *   대상 데이터에서 최대나 최소 데이터를 찾아 맨 앞(또는 맨뒤)와 교환하는 방법이다.
+ *   대상 데이터에서 최대나 최소 데이터를 찾아 맨 앞(또는 맨 뒤)와 교환하는 방법이다.
  *   배열의 모든 요소에 대해 반복한다.
- *   시간복잡도는 O(n^2)이라 효율적이지는 않다.
-**/
-
+ *   시간 복잡도는 O(n^2)이라 효율적이지는 않다.
+* */
 public class Application2 {
 
     /* 설명.
@@ -33,13 +34,34 @@ public class Application2 {
      *  예시 출력 2
      *    - 64 42 34 29 28 12
      * */
-    public static void solution(int length, int[]arr){
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        /* 설명. 입력 데이터 받기 */
+        int length = sc.nextInt();
+        int[] arr = new int[length];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = sc.nextInt();                  // 공백을 구분자로 하여 하나씩 입력 됨
+        }
+
+        /* 설명. 알고리즘 실행 */
+        solution(length, arr);
+
+        /* 설명. 정렬 결과 출력하기 */
+        for(int i: arr) {
+            System.out.print(i + " ");
+        }
+
+    }
+
+    public static void solution(int length, int[] arr) {
         for (int i = 0; i < length - 1; i++) {
             int maxIndex = i;
 
             /* 설명. j 범위에서 가장 큰 값을 maxIndex에 저장 */
-            for (int j = 0; j < length; j++) {
-                if(arr[i] < arr[j]){
+            for (int j = i + 1; j < length; j++) {
+                if(arr[i] < arr[j]) {
                     maxIndex = j;
                     int temp = arr[i];
                     arr[i] = arr[maxIndex];
@@ -48,6 +70,4 @@ public class Application2 {
             }
         }
     }
-
-
 }

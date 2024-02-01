@@ -4,8 +4,8 @@ package com.ohgiraffers.chap02.section01.sorting;
 /* 필기.
  *  삽입 정렬(Insertion Sort)
  *   이미 정렬된 데이터 범위에 정렬되지 않은 데이터를 적절한 위치에 삽입시켜 정렬하는 방식이다.
- *  시간 복잡도는 O(n^2)이고 효율적이지는 않다.
-**/
+ *   시간 복잡도는 O(n^2)이고 효율적이지는 않다.
+* */
 public class Application3 {
 
     /* 설명.
@@ -32,11 +32,11 @@ public class Application3 {
      *    - 5 14 17 19 26 38
      * */
 
-    public static void solution(int length, int[] arr){
-        for (int i = 0; i < length; i++) {
+    public static void solution(int length, int[] arr) {
+        for(int i = 1; i < length; i++) {
             int temp = arr[i];
             int j;
-            for (j = i - 1; j >= 0; j--) {
+            for(j = i - 1; j >= 0; j--) {
                 if(arr[j] > temp) arr[j + 1] = arr[j];
                 else break;
             }
